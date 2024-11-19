@@ -1,0 +1,47 @@
+$Montserrat : 'Montserrat', sans-serif,
+$FontsizeLarge : 24px
+
+.Header
+  color: white
+  text-align: center
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-family: $Montserrat
+  font-size: $FontsizeLarge
+  
+nav
+  display: flex
+  gap: 57px
+
+  a
+    color: black
+    text-decoration: none
+
+    &.active-link
+      text-decoration: underline
+    
+
+
+
+.Footer
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 28px
+  background-color: black
+  color: white
+  width: 100vw
+  margin-left: calc(-1 * 100px) // compense les marges globales pour collé le coté
+  padding: 66px 464px 29px 464px
+  text-align: center
+  font-family: $Montserrat
+  font-size: $FontsizeLarge
+ 
+  
+
+  img
+   width: 122px
+
+  p
+    margin: 0
