@@ -1,0 +1,35 @@
+$Montserrat : 'Montserrat', sans-serif,
+$FontsizeMedium : 18px
+
+.rental-list
+    background-color: #F6F6F6
+    padding: 50px
+    border-radius: 25px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    justify-items: center
+    gap: 60px
+    margin-bottom: 50px
+
+.rental-item
+  .image-container
+    position: relative
+
+    img
+      width: 340px
+      height: 340px
+      border-radius: 10px
+      display: block
+      object-fit: cover
+
+    .title
+      position: absolute
+      bottom: 20px
+      left: 20px
+      color: white
+      margin: 0
+      font-family: $Montserrat
+      font-size: $FontsizeMedium
+      max-width: 70% 
+      line-height: 25px
+    
