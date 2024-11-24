@@ -1,0 +1,41 @@
+@import './Variables'
+    
+    
+.TagRatingContainer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 20px
+
+.tagContainer
+    display: flex
+    gap: 10px
+    
+    .tag
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #FFFFFF
+        font-weight: $FontWeightBold
+        font-family: $Montserrat
+        font-size: $FontSizeSmall
+        background-image: url(../assets/images/BackgroundTag.png)
+        background-repeat: no-repeat
+        background-size: cover
+        min-width: 125px
+        min-height: 25px
+        border-radius: 10px
+
+.rating
+    display: flex
+    gap: 5px
+
+.star
+    font-size: 20px
+    
+    &.empty
+        color: #E3E3E3
+
+    &.filled
+        color: $ColorCorail
+        

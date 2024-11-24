@@ -1,0 +1,35 @@
+@import './Variables'
+
+.carrousel
+    position: relative
+    width: 100%
+    height: 415px
+    overflow: hidden
+
+.carrousel-image
+    width: 100%
+    height: 415px // Ajuste la hauteur selon ton besoin
+    object-fit: cover // Assure que l'image remplisse le conteneur
+    border-radius: 10px // Exemple d'arrondi
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2) // Ombre esthétique
+
+
+.carrousel-button
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    background: none
+    color: white
+    border: none
+    padding: 10px
+    cursor: pointer
+    z-index: 2
+
+.prev
+    left: 10px
+
+.next
+    right: 10px
+
+
+

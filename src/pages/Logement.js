@@ -1,5 +1,8 @@
 import { useParams } from 'react-router-dom';
-import logements from '../logements.json'
+import logements from '../logements.json';
+import Carrousel from '../components/Carrousel';
+import Informations from '../components/Informations';
+import TagRating from '../components/TagRating';
 
 const Logement = () => {
     const { id } = useParams(); // Récupère l'id depuis l'URL
@@ -12,10 +15,9 @@ const Logement = () => {
 
     return (
         <div className="logement-details">
-            <img src={logement.cover} alt={logement.title} />
-            <h1>{logement.title}</h1>
-            <p>{logement.description}</p>
-            <p>{id}</p>
+            <Carrousel images={logement.pictures} />
+            <Informations logement={logement} />
+            <TagRating logement={logement} />
             {/* Ajoute d'autres détails si nécessaire */}
         </div>
     );
