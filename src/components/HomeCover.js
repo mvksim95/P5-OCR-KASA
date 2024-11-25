@@ -1,5 +1,5 @@
 import ImageCover from '../assets/images/HomeCover.png'
-import './HomeCover.sass'
+import '../styles/HomeCover.sass'
 
 const HomeCover = () => {
     return (

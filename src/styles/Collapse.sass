@@ -1,0 +1,67 @@
+@import './Variables'
+
+.collapse
+    border-radius: 10px
+    margin: 25px 0 50px 0
+    overflow: hidden
+
+    .collapse-header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 10px 20px 10px 10px
+        background-color: $ColorCorail
+        color: white
+        font-family: $Montserrat
+        cursor: pointer
+        width: 582px
+        height: 52px
+        border-radius: inherit
+
+        h3
+            margin: 0
+            font-size: $FontsizeMedium
+            font-weight: $FontWeightBold
+
+        span
+            font-size: 20px
+            font-weight: bold
+
+        .chevron-icon
+            width: 24px
+            height: 13px
+            transition: transform 0.3s ease-in-out // animation fluide pour la rotation
+
+            &.rotate-up
+                transform: rotate(0deg)
+
+            &.rotate-down
+                transform: rotate(-180deg)
+
+    .collapse-content
+        width: 582px
+        max-height: 0
+        overflow: hidden
+        transform-origin: top // origine de la transformation => sous le header
+        transition: max-height 0.2s ease, transform 0.2s ease
+        transform: scaleY(0) // contenu compressé verticalement
+        padding: 25px 28px 20px 20px // aucun padding quand fermé
+
+        p
+            margin: 0
+            font-family: $Montserrat
+            font-size: $FontsizeMedium
+            font-weight: $FontWeightSmall
+
+        ul
+            margin: 0
+            padding: 0
+            list-style: none
+            font-family: $Montserrat
+            font-size: $FontsizeMedium
+            font-weight: $FontWeightSmall
+            
+        &.open
+            max-height: 500px // hauteur maximale pour afficher le contenu
+            transform: scaleY(1) // décompression verticale
+            padding: 50px 10px 0 0 // ajout du padding une fois ouvert

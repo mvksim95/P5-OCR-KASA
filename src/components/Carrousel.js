@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Carrousel.sass'
+import '../styles/Carrousel.sass'
 import ChevronRight from '../assets/images/chevronright.png'
 import ChevronLeft from '../assets/images/ChevronLeft.png'
 

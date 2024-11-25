@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import logements from '../logements.json'
-import './Rental.sass';
+import '../styles/Rental.sass';
 
 const Rental = () => {
     return (

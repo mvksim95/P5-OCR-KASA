@@ -1,4 +1,4 @@
-import './Informations.sass'
+import '../styles/Informations.sass'
 
 const Informations = ({ logement }) => {
     const [firstName, lastName] = logement.host.name.split(' '); // divise le prénom et le nom du host

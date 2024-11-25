@@ -1,4 +1,4 @@
-import './Layout.sass';
+import '../styles/Layout.sass';
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import logoheader from '../assets/images/logoheader.png'

@@ -3,13 +3,15 @@ import logements from '../logements.json';
 import Carrousel from '../components/Carrousel';
 import Informations from '../components/Informations';
 import TagRating from '../components/TagRating';
+import Collapse from '../components/Collapse';
+import '../styles/Logement.sass'
 
 const Logement = () => {
-    const { id } = useParams(); // Récupère l'id depuis l'URL
-    const logement = logements.find((logement) => logement.id === id); // Recherche du logement correspondant
+    const { id } = useParams(); // récupère l'id depuis l'URL
+    const logement = logements.find((logement) => logement.id === id); // recherche du logement correspondant
 
     if (!logement) {
-        // Si aucun logement ne correspond à l'id, retourne une erreur ou redirige
+        // mettre page notfound.js ici
         return <p>Logement non trouvé.</p>;
     }
 
@@ -18,7 +20,18 @@ const Logement = () => {
             <Carrousel images={logement.pictures} />
             <Informations logement={logement} />
             <TagRating logement={logement} />
-            {/* Ajoute d'autres détails si nécessaire */}
+            <div className='Collapse'>
+                <Collapse title="Description">
+                    <p>{logement.description}</p>
+                </Collapse>
+                <Collapse title="Équipements">
+                    <ul>
+                        {logement.equipments.map((equipment, index) => (
+                            <li key={index}>{equipment}</li>
+                        ))}
+                    </ul>
+                </Collapse>
+            </div>
         </div>
     );
 };

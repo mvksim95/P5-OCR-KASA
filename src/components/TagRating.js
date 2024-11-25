@@ -1,4 +1,4 @@
-import './TagRating.sass'
+import '../styles/TagRating.sass'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons'
 import { faStar as emptyStar } from '@fortawesome/free-solid-svg-icons'
