@@ -1,15 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// import '../styles/NotFound.sass';
+import NotFoundContainer from '../components/NotFoundContainer';
 
 const NotFound = () => {
+    console.log('Notfound.js rendu')
     return (
-        <div className="NotFound-container">
-            <h1>404</h1>
-            <p>Oups ! La page que vous cherchez n'existe pas.</p>
-            <Link to="/" className="home-link">
-                Retour à l'accueil
-            </Link>
+        <div>
+            <NotFoundContainer />
         </div>
     );
 };

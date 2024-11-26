@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import logements from '../logements.json';
 import Carrousel from '../components/Carrousel';
 import Informations from '../components/Informations';
@@ -9,13 +9,11 @@ import '../styles/Logement.sass'
 
 const Logement = () => {
     const { id } = useParams(); // Récupère l'id depuis l'URL
-    const navigate = useNavigate(); // Hook pour la redirection
     const logement = logements.find((logement) => logement.id === id); // Recherche du logement correspondant
 
     if (!logement) {
         // Redirige vers la page NotFound si aucun logement n'est trouvé
-        navigate('/notfound', { replace: true });
-        return null; // Empêche tout affichage supplémentaire
+        return <Navigate to="/notfound" replace />;
     }
 
     return (
