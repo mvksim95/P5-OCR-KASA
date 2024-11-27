@@ -6,6 +6,7 @@ import Informations from '../components/Informations';
 import TagRating from '../components/TagRating';
 import Collapse from '../components/Collapse';
 import '../styles/Logement.sass'
+import NotFound from './Notfound';
 
 const Logement = () => {
     const { id } = useParams(); // Récupère l'id depuis l'URL
@@ -13,7 +14,8 @@ const Logement = () => {
 
     if (!logement) {
         // Redirige vers la page NotFound si aucun logement n'est trouvé
-        return <Navigate to="/notfound" replace />;
+        return <NotFound />;
+        // possible d'utiliser // return <Navigate to="*" replace />
     }
 
     return (
