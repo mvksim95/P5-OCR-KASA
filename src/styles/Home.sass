@@ -1,4 +1,5 @@
 @import './Variables'
+@import './mixins'
 
 .home-content
     max-width: 1240px
@@ -6,3 +7,5 @@
     .Banner
         .Mask
             background-color: rgba(0, 0, 0, 0.6) 
+    @include respond-to(mobile)
+        max-width: 335px

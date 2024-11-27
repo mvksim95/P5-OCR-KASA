@@ -1,4 +1,5 @@
 @import './Variables'
+@import './mixins'
 
 .collapse
     border-radius: 10px
@@ -17,10 +18,16 @@
         height: 52px
         border-radius: inherit
 
+        @include respond-to(mobile)
+            height: 30px
+
         h3
             margin: 0
             font-size: $FontsizeMedium
             font-weight: $FontWeightBold
+
+            @include respond-to(mobile)
+                font-size: 13px
 
         span
             font-size: 20px
@@ -30,6 +37,10 @@
             width: 24px
             height: 13px
             transition: transform 0.3s ease-in-out // animation fluide pour la rotation
+
+            @include respond-to(mobile)
+                width: 16px
+                height: 9px
 
             &.rotate-up
                 transform: rotate(0deg)

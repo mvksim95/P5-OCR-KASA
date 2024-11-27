@@ -1,10 +1,14 @@
 @import './Variables'
+@import './mixins'
 
     
 .TitleAndName
     display: flex
     justify-content: space-between
     margin-top: 25px
+
+    @include respond-to(mobile)
+        
 
     .Title
         font-family: $Montserrat

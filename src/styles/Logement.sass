@@ -1,13 +1,24 @@
 @import './Variables'
+@import './mixins'
 
 .logement-details
     max-width: 1240px
     margin: 0 auto
+    
+    @include respond-to(mobile)
+        max-width: 335px
 
 .Collapse-logement
     display: flex
     gap: 76px
     margin: 25px 0 50px 0
+
+    @include respond-to(mobile)
+        flex-direction: column
+        gap: 0px
     
     .collapse-content
-        width: 5082px
+        width: 5000px
+
+        @include respond-to(mobile)
+            margin-bottom: 30px

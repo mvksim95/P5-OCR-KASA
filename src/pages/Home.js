@@ -10,7 +10,7 @@ const Home = () => {
     <Banner 
                 image={ImageBanner} 
                 altText="Photographie montrant une plage" 
-                title="Chez vous, partout et ailleurs" 
+                title="Chez vous, partout et ailleurs"
             /> 
     <Rental />
     </div>

@@ -1,4 +1,6 @@
 @import './Variables'
+@import './mixins'
+
 
 .Header
   color: white
@@ -9,11 +11,19 @@
   font-family: $Montserrat
   font-size: $FontsizeLarge
   max-width: 1240px
-  margin: 0 auto 50px auto
+  margin: 45px auto 50px auto
 
-main
-  max-width: 1440px
-  margin: 0 auto
+  @include respond-to(mobile)
+    max-width: 335px
+    margin: 20px auto 27px
+    font-size: $FontSizeXsmall
+    img
+      width: 145px
+
+// main
+//   max-width: 1440px
+//   margin: 0 auto
+  
 
 nav
   display: flex
@@ -25,7 +35,10 @@ nav
 
     &.active-link
       text-decoration: underline
-    
+
+  @include respond-to(mobile)
+    gap: 26px
+     
 
 .Footer
   display: flex
@@ -38,9 +51,22 @@ nav
   text-align: center
   font-family: $Montserrat
   font-size: $FontsizeLarge
- 
+  
+  @include respond-to(mobile)
+    padding: 66px 126px 58px 126px
+    font-size: $FontSizeXsmall
+    gap: 10px
+    line-height: 17px
+
   img
    width: 122px
 
   p
     margin: 0
+
+    @include respond-to(mobile)
+      padding: 0px 2px 0 0
+
+  
+
+    
