@@ -3,20 +3,21 @@ import logements from '../logements.json'
 import '../styles/Rental.sass';
 
 const Rental = () => {
-    return (
-        <div className='rental-list'>
-            {logements.map((logement) => (
+  return (
+    <div className='rental-list'>
+      {logements.map((logement) => (
         <div key={logement.id} className="rental-item">
-        <div>
-          <Link to={`${logement.id}`} className="cards">
-          <img src={logement.cover} alt={logement.title} />
-          <h2 className="title">{logement.title}</h2>
-          </Link>
+          <div>
+            <Link to={`/logement/${logement.id}`} className="cards"> 
+            {/*logement/${logement.id} pour que la route soit bonne au niveau du router*/}
+              <img src={logement.cover} alt={logement.title} />
+              <h2 className="title">{logement.title}</h2>
+            </Link>
+          </div>
         </div>
-      </div>
-        ))}
-        </div>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default Rental;
