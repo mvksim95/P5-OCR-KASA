@@ -21,17 +21,18 @@ const Collapse = ({ title, children }) => {
                 />
             </div>
             <div
-                className="collapse-content"
+                className={`collapse-content ${isOpen ? 'open' : ''}`}
+                ref={contentRef}
                 style={{
                     maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : '0',
                     transform: isOpen ? 'scaleY(1)' : 'scaleY(0)',
                 }}
-                ref={contentRef}
             >
                 {children}
             </div>
         </div>
     );
 };
+
 
 export default Collapse;

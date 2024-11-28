@@ -49,29 +49,22 @@
                 transform: rotate(-180deg)
 
     .collapse-content
-        max-height: 0
         overflow: hidden
         transform-origin: top // origine de la transformation => sous le header
         transition: max-height 0.2s ease, transform 0.2s ease
-        transform: scaleY(0) // contenu compressé verticalement
-        padding: 25px 28px 20px 20px // aucun padding quand fermé
         background-color: $LightGrey
+        margin: 0
+        font-family: $Montserrat
+        font-size: $FontsizeMedium
+        font-weight: $FontWeightSmall
+        list-style: none
+        padding: 25px 28px 20px 20px
+        line-height: 25px
 
-        p
-            margin: 0
-            font-family: $Montserrat
-            font-size: $FontsizeMedium
-            font-weight: $FontWeightSmall
-
-        ul
-            margin: 0
-            padding: 0
-            list-style: none
-            font-family: $Montserrat
-            font-size: $FontsizeMedium
-            font-weight: $FontWeightSmall
-            
         &.open
-            max-height: 500px // hauteur maximale pour afficher le contenu
-            transform: scaleY(1) // décompression verticale
-            padding: 50px 10px 0 0 // ajout du padding une fois ouvert
+            max-height: 1000px
+        
+        @include respond-to(mobile)
+            font-size: 13px
+    
+        

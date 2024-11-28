@@ -1,11 +1,15 @@
 @import './Variables'
+@import './mixins'
 
 .About-container
     max-width: 1240px
-    margin: 0 auto
+    margin: 0 auto 
     .Banner
         .Mask
-            background-color: rgba(0, 0, 0, 0.3) 
+            background-color: rgba(0, 0, 0, 0.3)
+    
+    @include respond-to(mobile)
+        max-width: 335px
 
 .Collapse-about
     display: flex
@@ -13,3 +17,12 @@
     margin: 38px 108px
     .collapse-content
         margin-bottom: 25px
+
+    @include respond-to(mobile)
+        margin: 0
+
+// .collapse
+//     max-height: 50px
+//     &.open
+//         max-height: 500px
+

@@ -8,6 +8,8 @@
     margin-top: 25px
 
     @include respond-to(mobile)
+        flex-direction: column
+        margin-top: 15px
         
 
     .Title
@@ -18,12 +20,20 @@
         margin: 0
         line-height: 51px
 
+        @include respond-to(mobile)
+            font-size: $FontsizeMedium
+            line-height: 25px
+
     .location
         font-family: $Montserrat
         font-size: $FontsizeMedium
         margin: 0
         font-weight: $FontWeightMedium
         line-height: 25px
+
+        @include respond-to(mobile)
+            font-size: $FontSizeSmall
+            line-height: 20px
     
     .tagContainer
         display: flex
@@ -45,9 +55,23 @@
             min-height: 25px
             border-radius: 10px
 
+            @include respond-to(mobile)
+                margin-top: 10px
+                font-size: $FontSizeXXsmall
+                line-height: 14px
+                min-width: 84px
+                min-height: 18px
+                border-radius: 5px
+
 .host-rating
     display: flex
     flex-direction: column
+
+    @include respond-to(mobile)
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        margin-top: 16px
 
     .host-info
         display: flex
@@ -62,19 +86,36 @@
             color: $ColorCorail
             margin: 0
             line-height: 25px
+
+            @include respond-to(mobile)
+                font-size: $FontSizeXsmall
+                line-height: 17px
+
         img
             width: 64px
             height: 64px
             border-radius: 100px
+
+            @include respond-to(mobile)
+                width: 32px
+                height: 32px
             
     .rating
         display: flex
         gap: 10px
         margin-top: 20px
+
+        @include respond-to(mobile)
+            order: -1
+            gap: 4.5px
+            margin: 0
     
     .star
         font-size: 20px
-    
+
+        @include respond-to(mobile)
+            font-size: $FontSizeSmall
+
         &.empty
             color: #E3E3E3
 
