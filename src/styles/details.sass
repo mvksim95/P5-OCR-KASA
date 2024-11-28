@@ -1,0 +1,82 @@
+@import './Variables'
+@import './mixins'
+
+
+.details-container
+    display: flex
+    justify-content: space-between
+    margin-top: 25px
+
+    @include respond-to(mobile)
+        
+
+    .Title
+        font-family: $Montserrat
+        font-size: $FontsizeXL
+        color : $ColorCorail
+        font-weight: $FontWeightMedium 
+        margin: 0
+        line-height: 51px
+
+    .location
+        font-family: $Montserrat
+        font-size: $FontsizeMedium
+        margin: 0
+        font-weight: $FontWeightMedium
+        line-height: 25px
+    
+    .tagContainer
+        display: flex
+        gap: 10px
+
+        .tag
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-top: 20px
+            color: #FFFFFF
+            font-weight: $FontWeightBold
+            font-family: $Montserrat
+            font-size: $FontSizeSmall
+            background-image: url(../assets/images/BackgroundTag.png)
+            background-repeat: no-repeat
+            background-size: cover
+            min-width: 125px
+            min-height: 25px
+            border-radius: 10px
+
+.host-rating
+    display: flex
+    flex-direction: column
+
+    .host-info
+        display: flex
+        justify-content: flex-end
+        gap: 10px
+        .name
+            display: flex
+            align-items: center
+            text-align: right
+            font-family: $Montserrat
+            font-size: $FontsizeMedium
+            color: $ColorCorail
+            margin: 0
+            line-height: 25px
+        img
+            width: 64px
+            height: 64px
+            border-radius: 100px
+            
+    .rating
+        display: flex
+        gap: 10px
+        margin-top: 20px
+    
+    .star
+        font-size: 20px
+    
+        &.empty
+            color: #E3E3E3
+
+        &.filled
+            color: $ColorCorail
