@@ -12,13 +12,18 @@
     display: flex
     gap: 76px
     margin: 25px 0 50px 0
+    
+    .collapse
+        width: 50%
+        @include respond-to(mobile)
+            width: 100%
 
     @include respond-to(mobile)
         flex-direction: column
         gap: 0px
+        
     
     .collapse-content
-        width: 5000px
-
         @include respond-to(mobile)
             margin-bottom: 30px
+            width: 100%

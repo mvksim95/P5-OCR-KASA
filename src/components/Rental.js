@@ -7,7 +7,7 @@ const Rental = () => {
     <div className='rental-list'>
       {logements.map((logement) => (
         <div key={logement.id} className="rental-item">
-          <div>
+          <div className='div-cards'>
             <Link to={`/logement/${logement.id}`} className="cards"> 
             {/*logement/${logement.id} pour que la route soit bonne au niveau du router*/}
               <img src={logement.cover} alt={logement.title} />
