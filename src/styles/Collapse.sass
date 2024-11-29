@@ -2,7 +2,6 @@
 @import './mixins'
 
 .collapse
-    border-radius: 10px
     overflow: hidden
 
     .collapse-header
@@ -16,7 +15,9 @@
         cursor: pointer
         width: auto
         height: 52px
-        border-radius: inherit
+        border-radius: 10px
+        @include respond-to(mobile)
+            border-radius: 5px
 
         @include respond-to(mobile)
             height: 30px

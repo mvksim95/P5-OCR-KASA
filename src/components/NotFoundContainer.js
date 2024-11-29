@@ -7,7 +7,9 @@ const NotFoundContainer = () => {
         <div className='Content'>
             <h1 className='404'>{'404'}</h1>
             <h2 className='CoverTitle'>{'Oups! La page que vous demandez n\'existe pas.'}</h2>
-            <Link to="/" className="home-link">Retourner sur la page d'accueil</Link>
+            <Link to="/" className="home-link">
+                Retourner sur la page d'accueil
+            </Link>
         </div>
     );
 };
