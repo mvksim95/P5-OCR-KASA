@@ -24,12 +24,12 @@ const Layout = () => {
         <Outlet />
       </main>
       <footer>
-        <section className='Footer'>
+        <div className='Footer'>
             <img src={logoFooter} alt="Logo du site" />
             <p className='copyright'>
                 © 2020 Kasa. All rights reserved
             </p>
-        </section>
+        </div>
       </footer>
     </div>
   );
