@@ -18,17 +18,19 @@ const Carrousel = ({ images }) => {
 
     return (
         <div className="carrousel">
-            <img
-                src={images[currentIndex]}
-                alt='Photographie de la location'
-                className="carrousel-image"
-            />
-            <button className="carrousel-button prev" onClick={goToPrev}>
-            <img src={ChevronLeft} alt='chevron-gauche' className="ChevronLeft"/>
-            </button>
-            <button className="carrousel-button next" onClick={goToNext}>
-            <img src={ChevronRight} alt='chevron-droite' className="ChevronRight"/>
-            </button>
+            <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="carrousel-image" />
+
+            {/* affiche les boutons uniquement si plus d'une image */}
+            {images.length > 1 && (
+                <>
+                    <button className="carrousel-button prev" onClick={goToPrev}>
+                        <img src={ChevronLeft} alt='chevron-gauche' className="ChevronLeft" />
+                    </button>
+                    <button className="carrousel-button next" onClick={goToNext}>
+                        <img src={ChevronRight} alt='chevron-droite' className="ChevronRight" />
+                    </button>
+                </>
+            )}
         </div>
     );
 };

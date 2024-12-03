@@ -13,7 +13,7 @@ const Logement = () => {
 
     useEffect(() => {
         if (!logement) {
-            navigate('/notfound', { replace: true }); // redirige vers /notfound si le logement n'existe pas
+            navigate('/notfound', { replace: true }); // redirige vers /notfound si le logement n'existe pas (replace true évite que l'utilisateur puisse revenir sur une route invalide ou inutile en cliquant sur "retour")
         }
     }, [logement, navigate]); // déclenche l'effet si logement ou navigate change
 
