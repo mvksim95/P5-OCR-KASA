@@ -20,6 +20,13 @@ const Carrousel = ({ images }) => {
         <div className="carrousel">
             <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="carrousel-image" />
 
+            {/* indicateur du nombre d'images : affiché uniquement si plus d'une image */}
+            {images.length > 1 && (
+                <div className="carrousel-indicator">
+                    {currentIndex + 1}/{images.length}
+                </div>
+            )}
+
             {/* affiche les boutons uniquement si plus d'une image */}
             {images.length > 1 && (
                 <>
