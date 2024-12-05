@@ -50,22 +50,22 @@
                 transform: rotate(-180deg)
   
     .collapse-content
-        overflow: hidden
-        transform-origin: top // origine de la transformation => sous le header
-        transition: max-height 0.3s ease, transform 0.3s ease       
+        overflow: hidden    
         background-color: $LightGrey
+        transform-origin: top // origine de la transformation => sous le header
+        transition: transform 0.3s ease 
+        max-height: 0
         margin: 0
         font-family: $Montserrat
         font-size: $FontsizeMedium
         font-weight: $FontWeightSmall
         list-style: none
-        padding: 25px 28px 20px 20px
+        padding: 0px 28px 0px 20px
         line-height: 25px
-        display: none
+        &.open  
+            max-height: 500px
+            padding: 25px 28px 20px 20px
 
-        &.open
-            max-height: 5000px
-            display: block
         
         @include respond-to(mobile)
             font-size: 13px
